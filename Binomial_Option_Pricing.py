@@ -30,7 +30,8 @@ r = _   # Replace the underscore with the Risk-Free Interest Rate.
 σ = _   # Replace the underscore with the Volatility (Standard Deviation).
 n = _   # Replace the underscore with the Number of Steps in the Tree.
 
-def american_call_binomial(S, K, T, r, σ, n):
+
+def binomial_call(S, K, T, r, σ, n):
     dt = T / n
     u = np.exp(σ * np.sqrt(dt))
     d = 1 / u
@@ -47,7 +48,7 @@ def american_call_binomial(S, K, T, r, σ, n):
 
     return option[0]
 
-def american_put_binomial(S, K, T, r, σ, n):
+def binomial_put(S, K, T, r, σ, n):
     dt = T / n
     u = np.exp(σ * np.sqrt(dt))
     d = 1 / u
@@ -61,11 +62,11 @@ def american_put_binomial(S, K, T, r, σ, n):
         ST = ST[:i+1] / u
         option = disc * (p * option[1:] + (1 - p) * option[:-1])
         option = np.maximum(option, K - ST)  
-
+        
     return option[0]
 
-print(american_call_binomial(S, K, T, r, σ, n))
-print(american_put_binomial(S, K, T, r, σ, n))
+print(binomial_call(S, K, T, r, σ, n))
+print(binomial_put(S, K, T, r, σ, n))
 
 
 # IMPORTANT - This code will show error until the underscores are filled.
