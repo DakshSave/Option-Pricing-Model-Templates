@@ -1,6 +1,8 @@
 #BINOMIAL OPTION PRICING MODEL
 
+
 import numpy as np
+
 
 '''
 Binomial Tree Formula for American Options
@@ -20,9 +22,10 @@ Parameters:
     n  = Number of time steps in the binomial tree
 '''
 
+
 S = _   # Replace the underscore with the Current Stock Price.
 K = _   # Replace the underscore with the Strike Price.
-T = _   # Replace the underscore with the Time to Maturity (in years).
+T = _   # Replace the underscore with the Time to Maturity (in % of years).
 r = _   # Replace the underscore with the Risk-Free Interest Rate.
 σ = _   # Replace the underscore with the Volatility (Standard Deviation).
 n = _   # Replace the underscore with the Number of Steps in the Tree.
@@ -63,5 +66,6 @@ def american_put_binomial(S, K, T, r, σ, n):
 
 print(american_call_binomial(S, K, T, r, σ, n))
 print(american_put_binomial(S, K, T, r, σ, n))
+
 
 # IMPORTANT - This code will show error until the underscores are filled.
