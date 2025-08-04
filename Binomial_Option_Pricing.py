@@ -16,7 +16,7 @@ Put Option:
 Parameters:
     S  = Current Stock Price
     K  = Strike Price
-    T  = Time to Maturity (in years)
+    T  = Time to Maturity (in % of years)
     r  = Risk-Free Interest Rate
     σ  = Volatility (Standard Deviation of Returns)
     n  = Number of time steps in the binomial tree
