@@ -5,13 +5,13 @@ import numpy as np
 
 
 '''
-Binomial Tree Formula for American Options
+Binomial Tree Formula
 
 Call Option:
-    C = max(S − K, discounted expected value from next step)
+    C = max(S − K, Discounted Expected Value from Next Step)
 
 Put Option:
-    P = max(K − S, discounted expected value from next step)
+    P = max(K − S, Discounted Expected Value from Next Step)
 
 Parameters:
     S  = Current Stock Price
